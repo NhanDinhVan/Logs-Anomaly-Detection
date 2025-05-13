@@ -18,4 +18,4 @@ def preprocess_log_file(input_path, output_path):
 
 # Ví dụ sử dụng
 if __name__ == '__main__':
-    preprocess_log_file('data/remote.log', 'data/processed_log.csv')
+    preprocess_log_file('./data/access.log', './data/processed_access_log.csv')
