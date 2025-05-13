@@ -1,0 +1,2268 @@
+message
+sudo[230375]:     root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/systemctl restart syslog-ng
+sudo[230375]: pam_unix(sudo:session): session opened for user root(uid=0) by nhandinhvan(uid=0)
+systemd[1]: Stopping syslog-ng.service - System Logger Daemon...
+mariadbd[1010]: 2025-05-13 22:04:47 4399 [Warning] Aborted connection 4399 to db: 'librenms' user: 'librenms' host: 'localhost' (Got an error reading communication packets)
+systemd[1]: syslog-ng.service: Deactivated successfully.
+systemd[1]: Stopped syslog-ng.service - System Logger Daemon.
+systemd[1]: Starting syslog-ng.service - System Logger Daemon...
+(yslog-ng)[230392]: syslog-ng.service: Referenced but unset environment variable evaluates to an empty string: SYSLOGNG_OPTS
+"syslog-ng[230392]: [2025-05-13T22:04:47.813985] smart-multi-line: error opening smart-multi-line.fsm file; filename='/usr/share/syslog-ng/smart-multi-line.fsm', error='No such file or directory (2)'"
+"syslog-ng[230392]: [2025-05-13T22:04:47.814037] smart-multi-line: your smart-multi-line.fsm seems to be empty or non-existent, automatic multi-line log extraction will probably not work; filename='/usr/share/syslog-ng/smart-multi-line.fsm'"
+"syslog-ng[230392]: [2025-05-13T22:04:47.818404] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 4.3 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.38'"
+"syslog-ng[230392]: [2025-05-13T22:04:47.818881] WARNING: Your configuration file uses an obsoleted keyword, please update your configuration; keyword='stats_freq', change='Use the stats() block. E.g. stats(freq(1));', location='/etc/syslog-ng/syslog-ng.conf:10:4'"
+"syslog-ng[230392]: [2025-05-13T22:04:47.823569] WARNING: Duplicate configuration objects (sources, destinations, ...) are not allowed by default starting with syslog-ng 3.3, add ""@define allow-config-dups 1"" to your configuration to re-enable;"
+"syslog-ng[230392]: Error parsing config, duplicate destination definition in /etc/syslog-ng/conf.d/librenms.conf:12:1-14:2:"
+syslog-ng[230392]: 7       destination d_librenms {
+"syslog-ng[230392]: 8           program(""/opt/librenms/syslog.php"""
+"syslog-ng[230392]: 9               template (""$HOST||$FACILITY||$PRIORITY||$LEVEL||$MSG\n"")"
+syslog-ng[230392]: 10          );
+syslog-ng[230392]: 11      };
+syslog-ng[230392]: 12----> destination d_debug {
+syslog-ng[241056]: syslog-ng starting up; version='4.3.1'
+syslog-ng[230392]: 12----> ^^^^^^^^^^^^^^^^^^^^^^
+"syslog-ng[230392]: 13---->     file(""/var/log/remote.log"");"
+syslog-ng[230392]: 14----> };
+syslog-ng[230392]: 15      log {
+syslog-ng[230392]: 16          source(s_librenms_net);  # dÃ¹ng source má»›i
+syslog-ng[230392]: 17          source(s_src);
+syslog-ng[230392]: Included from /etc/syslog-ng/syslog-ng.conf:160:1-160:1:
+syslog-ng[230392]: syslog-ng documentation: https://www.syslog-ng.com/technical-documents/list/syslog-ng-open-source-edition
+syslog-ng[230392]: contact:
+syslog-ng[230392]: 	GitHub Project: https://github.com/syslog-ng/syslog-ng
+syslog-ng[230392]: 	Chat with the Developers: https://gitter.im/syslog-ng/syslog-ng
+syslog-ng[230392]: 	Mailing List: https://lists.balabit.hu/mailman/listinfo/syslog-ng
+"systemd[1]: syslog-ng.service: Main process exited, code=exited, status=1/FAILURE"
+systemd[1]: syslog-ng.service: Failed with result 'exit-code'.
+systemd[1]: Failed to start syslog-ng.service - System Logger Daemon.
+sudo[230375]: pam_unix(sudo:session): session closed for user root
+"systemd[1]: syslog-ng.service: Scheduled restart job, restart counter is at 1."
+systemd[1]: Starting syslog-ng.service - System Logger Daemon...
+(yslog-ng)[230401]: syslog-ng.service: Referenced but unset environment variable evaluates to an empty string: SYSLOGNG_OPTS
+"syslog-ng[230401]: [2025-05-13T22:04:48.027506] smart-multi-line: error opening smart-multi-line.fsm file; filename='/usr/share/syslog-ng/smart-multi-line.fsm', error='No such file or directory (2)'"
+"syslog-ng[230401]: [2025-05-13T22:04:48.027688] smart-multi-line: your smart-multi-line.fsm seems to be empty or non-existent, automatic multi-line log extraction will probably not work; filename='/usr/share/syslog-ng/smart-multi-line.fsm'"
+"syslog-ng[230401]: [2025-05-13T22:04:48.031954] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 4.3 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.38'"
+"syslog-ng[230401]: [2025-05-13T22:04:48.032567] WARNING: Your configuration file uses an obsoleted keyword, please update your configuration; keyword='stats_freq', change='Use the stats() block. E.g. stats(freq(1));', location='/etc/syslog-ng/syslog-ng.conf:10:4'"
+"syslog-ng[230401]: [2025-05-13T22:04:48.036027] WARNING: Duplicate configuration objects (sources, destinations, ...) are not allowed by default starting with syslog-ng 3.3, add ""@define allow-config-dups 1"" to your configuration to re-enable;"
+"syslog-ng[230401]: Error parsing config, duplicate destination definition in /etc/syslog-ng/conf.d/librenms.conf:12:1-14:2:"
+syslog-ng[230401]: 7       destination d_librenms {
+"syslog-ng[230401]: 8           program(""/opt/librenms/syslog.php"""
+"syslog-ng[230401]: 9               template (""$HOST||$FACILITY||$PRIORITY||$LEVEL||$MSG\n"")"
+syslog-ng[230401]: 10          );
+syslog-ng[230401]: 11      };
+syslog-ng[230401]: 12----> destination d_debug {
+syslog-ng[230401]: 12----> ^^^^^^^^^^^^^^^^^^^^^^
+"syslog-ng[230401]: 13---->     file(""/var/log/remote.log"");"
+syslog-ng[230401]: 14----> };
+syslog-ng[230401]: 15      log {
+syslog-ng[230401]: 16          source(s_librenms_net);  # dÃ¹ng source má»›i
+syslog-ng[230401]: 17          source(s_src);
+syslog-ng[230401]: Included from /etc/syslog-ng/syslog-ng.conf:160:1-160:1:
+syslog-ng[230401]: syslog-ng documentation: https://www.syslog-ng.com/technical-documents/list/syslog-ng-open-source-edition
+syslog-ng[230401]: contact:
+syslog-ng[230401]: 	GitHub Project: https://github.com/syslog-ng/syslog-ng
+syslog-ng[230401]: 	Chat with the Developers: https://gitter.im/syslog-ng/syslog-ng
+syslog-ng[230401]: 	Mailing List: https://lists.balabit.hu/mailman/listinfo/syslog-ng
+"systemd[1]: syslog-ng.service: Main process exited, code=exited, status=1/FAILURE"
+systemd[1]: syslog-ng.service: Failed with result 'exit-code'.
+systemd[1]: Failed to start syslog-ng.service - System Logger Daemon.
+CRON[227362]: pam_unix(cron:session): session closed for user librenms
+"systemd[1]: syslog-ng.service: Scheduled restart job, restart counter is at 2."
+(yslog-ng)[230413]: syslog-ng.service: Referenced but unset environment variable evaluates to an empty string: SYSLOGNG_OPTS
+systemd[1]: Starting syslog-ng.service - System Logger Daemon...
+"syslog-ng[230413]: [2025-05-13T22:04:48.285670] smart-multi-line: error opening smart-multi-line.fsm file; filename='/usr/share/syslog-ng/smart-multi-line.fsm', error='No such file or directory (2)'"
+"syslog-ng[230413]: [2025-05-13T22:04:48.285701] smart-multi-line: your smart-multi-line.fsm seems to be empty or non-existent, automatic multi-line log extraction will probably not work; filename='/usr/share/syslog-ng/smart-multi-line.fsm'"
+"syslog-ng[230413]: [2025-05-13T22:04:48.288380] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 4.3 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.38'"
+"syslog-ng[230413]: [2025-05-13T22:04:48.288891] WARNING: Your configuration file uses an obsoleted keyword, please update your configuration; keyword='stats_freq', change='Use the stats() block. E.g. stats(freq(1));', location='/etc/syslog-ng/syslog-ng.conf:10:4'"
+"syslog-ng[230413]: [2025-05-13T22:04:48.292147] WARNING: Duplicate configuration objects (sources, destinations, ...) are not allowed by default starting with syslog-ng 3.3, add ""@define allow-config-dups 1"" to your configuration to re-enable;"
+"syslog-ng[230413]: Error parsing config, duplicate destination definition in /etc/syslog-ng/conf.d/librenms.conf:12:1-14:2:"
+syslog-ng[230413]: 7       destination d_librenms {
+"syslog-ng[230413]: 8           program(""/opt/librenms/syslog.php"""
+"syslog-ng[230413]: 9               template (""$HOST||$FACILITY||$PRIORITY||$LEVEL||$MSG\n"")"
+syslog-ng[230413]: 10          );
+syslog-ng[230413]: 11      };
+syslog-ng[230413]: 12----> destination d_debug {
+syslog-ng[230413]: 12----> ^^^^^^^^^^^^^^^^^^^^^^
+"syslog-ng[230413]: 13---->     file(""/var/log/remote.log"");"
+syslog-ng[230413]: 14----> };
+syslog-ng[230413]: 15      log {
+syslog-ng[230413]: 16          source(s_librenms_net);  # dÃ¹ng source má»›i
+syslog-ng[230413]: 17          source(s_src);
+syslog-ng[230413]: Included from /etc/syslog-ng/syslog-ng.conf:160:1-160:1:
+syslog-ng[230413]: syslog-ng documentation: https://www.syslog-ng.com/technical-documents/list/syslog-ng-open-source-edition
+syslog-ng[230413]: contact:
+syslog-ng[230413]: 	GitHub Project: https://github.com/syslog-ng/syslog-ng
+syslog-ng[230413]: 	Chat with the Developers: https://gitter.im/syslog-ng/syslog-ng
+syslog-ng[230413]: 	Mailing List: https://lists.balabit.hu/mailman/listinfo/syslog-ng
+"systemd[1]: syslog-ng.service: Main process exited, code=exited, status=1/FAILURE"
+systemd[1]: syslog-ng.service: Failed with result 'exit-code'.
+systemd[1]: Failed to start syslog-ng.service - System Logger Daemon.
+"systemd[1]: syslog-ng.service: Scheduled restart job, restart counter is at 3."
+systemd[1]: Starting syslog-ng.service - System Logger Daemon...
+(yslog-ng)[230421]: syslog-ng.service: Referenced but unset environment variable evaluates to an empty string: SYSLOGNG_OPTS
+"syslog-ng[230421]: [2025-05-13T22:04:48.553683] smart-multi-line: error opening smart-multi-line.fsm file; filename='/usr/share/syslog-ng/smart-multi-line.fsm', error='No such file or directory (2)'"
+"syslog-ng[230421]: [2025-05-13T22:04:48.553805] smart-multi-line: your smart-multi-line.fsm seems to be empty or non-existent, automatic multi-line log extraction will probably not work; filename='/usr/share/syslog-ng/smart-multi-line.fsm'"
+"syslog-ng[230421]: [2025-05-13T22:04:48.558788] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 4.3 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.38'"
+"syslog-ng[230421]: [2025-05-13T22:04:48.559404] WARNING: Your configuration file uses an obsoleted keyword, please update your configuration; keyword='stats_freq', change='Use the stats() block. E.g. stats(freq(1));', location='/etc/syslog-ng/syslog-ng.conf:10:4'"
+"syslog-ng[230421]: [2025-05-13T22:04:48.563380] WARNING: Duplicate configuration objects (sources, destinations, ...) are not allowed by default starting with syslog-ng 3.3, add ""@define allow-config-dups 1"" to your configuration to re-enable;"
+"syslog-ng[230421]: Error parsing config, duplicate destination definition in /etc/syslog-ng/conf.d/librenms.conf:12:1-14:2:"
+syslog-ng[230421]: 7       destination d_librenms {
+"syslog-ng[230421]: 8           program(""/opt/librenms/syslog.php"""
+"syslog-ng[230421]: 9               template (""$HOST||$FACILITY||$PRIORITY||$LEVEL||$MSG\n"")"
+syslog-ng[230421]: 10          );
+syslog-ng[230421]: 11      };
+syslog-ng[230421]: 12----> destination d_debug {
+syslog-ng[230421]: 12----> ^^^^^^^^^^^^^^^^^^^^^^
+"syslog-ng[230421]: 13---->     file(""/var/log/remote.log"");"
+syslog-ng[230421]: 14----> };
+syslog-ng[230421]: 15      log {
+syslog-ng[230421]: 16          source(s_librenms_net);  # dÃ¹ng source má»›i
+syslog-ng[230421]: 17          source(s_src);
+syslog-ng[230421]: Included from /etc/syslog-ng/syslog-ng.conf:160:1-160:1:
+syslog-ng[230421]: syslog-ng documentation: https://www.syslog-ng.com/technical-documents/list/syslog-ng-open-source-edition
+syslog-ng[230421]: contact:
+syslog-ng[230421]: 	GitHub Project: https://github.com/syslog-ng/syslog-ng
+syslog-ng[230421]: 	Chat with the Developers: https://gitter.im/syslog-ng/syslog-ng
+syslog-ng[230421]: 	Mailing List: https://lists.balabit.hu/mailman/listinfo/syslog-ng
+"systemd[1]: syslog-ng.service: Main process exited, code=exited, status=1/FAILURE"
+systemd[1]: syslog-ng.service: Failed with result 'exit-code'.
+systemd[1]: Failed to start syslog-ng.service - System Logger Daemon.
+"systemd[1]: syslog-ng.service: Scheduled restart job, restart counter is at 4."
+systemd[1]: Starting syslog-ng.service - System Logger Daemon...
+(yslog-ng)[230427]: syslog-ng.service: Referenced but unset environment variable evaluates to an empty string: SYSLOGNG_OPTS
+"syslog-ng[230427]: [2025-05-13T22:04:48.791449] smart-multi-line: error opening smart-multi-line.fsm file; filename='/usr/share/syslog-ng/smart-multi-line.fsm', error='No such file or directory (2)'"
+"syslog-ng[230427]: [2025-05-13T22:04:48.791480] smart-multi-line: your smart-multi-line.fsm seems to be empty or non-existent, automatic multi-line log extraction will probably not work; filename='/usr/share/syslog-ng/smart-multi-line.fsm'"
+"syslog-ng[230427]: [2025-05-13T22:04:48.794672] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 4.3 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.38'"
+"syslog-ng[230427]: [2025-05-13T22:04:48.795289] WARNING: Your configuration file uses an obsoleted keyword, please update your configuration; keyword='stats_freq', change='Use the stats() block. E.g. stats(freq(1));', location='/etc/syslog-ng/syslog-ng.conf:10:4'"
+"syslog-ng[230427]: [2025-05-13T22:04:48.799491] WARNING: Duplicate configuration objects (sources, destinations, ...) are not allowed by default starting with syslog-ng 3.3, add ""@define allow-config-dups 1"" to your configuration to re-enable;"
+"syslog-ng[230427]: Error parsing config, duplicate destination definition in /etc/syslog-ng/conf.d/librenms.conf:12:1-14:2:"
+syslog-ng[230427]: 7       destination d_librenms {
+"syslog-ng[230427]: 8           program(""/opt/librenms/syslog.php"""
+"syslog-ng[230427]: 9               template (""$HOST||$FACILITY||$PRIORITY||$LEVEL||$MSG\n"")"
+syslog-ng[230427]: 10          );
+syslog-ng[230427]: 11      };
+syslog-ng[230427]: 12----> destination d_debug {
+syslog-ng[230427]: 12----> ^^^^^^^^^^^^^^^^^^^^^^
+"syslog-ng[230427]: 13---->     file(""/var/log/remote.log"");"
+syslog-ng[230427]: 14----> };
+syslog-ng[230427]: 15      log {
+syslog-ng[230427]: 16          source(s_librenms_net);  # dÃ¹ng source má»›i
+syslog-ng[230427]: 17          source(s_src);
+syslog-ng[230427]: Included from /etc/syslog-ng/syslog-ng.conf:160:1-160:1:
+syslog-ng[230427]: syslog-ng documentation: https://www.syslog-ng.com/technical-documents/list/syslog-ng-open-source-edition
+syslog-ng[230427]: contact:
+syslog-ng[230427]: 	GitHub Project: https://github.com/syslog-ng/syslog-ng
+syslog-ng[230427]: 	Chat with the Developers: https://gitter.im/syslog-ng/syslog-ng
+syslog-ng[230427]: 	Mailing List: https://lists.balabit.hu/mailman/listinfo/syslog-ng
+"systemd[1]: syslog-ng.service: Main process exited, code=exited, status=1/FAILURE"
+systemd[1]: syslog-ng.service: Failed with result 'exit-code'.
+systemd[1]: Failed to start syslog-ng.service - System Logger Daemon.
+"systemd[1]: syslog-ng.service: Scheduled restart job, restart counter is at 5."
+systemd[1]: syslog-ng.service: Start request repeated too quickly.
+systemd[1]: syslog-ng.service: Failed with result 'exit-code'.
+systemd[1]: Failed to start syslog-ng.service - System Logger Daemon.
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[230530]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+CRON[230538]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+CRON[230535]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[230534]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[230540]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[230531]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[230541]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[230533]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[230532]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[230536]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[230537]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[230530]: pam_unix(cron:session): session closed for user root
+CRON[230543]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[230542]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[230545]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[230547]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[230546]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[230534]: pam_unix(cron:session): session closed for user librenms
+CRON[230533]: pam_unix(cron:session): session closed for user librenms
+CRON[230532]: pam_unix(cron:session): session closed for user librenms
+CRON[230531]: pam_unix(cron:session): session closed for user librenms
+CRON[230536]: pam_unix(cron:session): session closed for user librenms
+CRON[230535]: pam_unix(cron:session): session closed for user librenms
+CRON[228939]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[232106]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[232113]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[232111]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[232110]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[232115]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[232107]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[232109]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[232116]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[232108]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[232112]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[232117]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[232119]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[232120]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[232118]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[232106]: pam_unix(cron:session): session closed for user librenms
+CRON[232111]: pam_unix(cron:session): session closed for user librenms
+CRON[232107]: pam_unix(cron:session): session closed for user librenms
+CRON[232109]: pam_unix(cron:session): session closed for user librenms
+CRON[232108]: pam_unix(cron:session): session closed for user librenms
+CRON[232110]: pam_unix(cron:session): session closed for user librenms
+CRON[230537]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[233697]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[233696]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[233700]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[233701]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[233693]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[233694]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[233698]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[233695]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[233703]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[233702]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[233699]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[233704]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[233707]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[233708]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[233693]: pam_unix(cron:session): session closed for user librenms
+CRON[233698]: pam_unix(cron:session): session closed for user librenms
+CRON[233694]: pam_unix(cron:session): session closed for user librenms
+CRON[233695]: pam_unix(cron:session): session closed for user librenms
+CRON[233696]: pam_unix(cron:session): session closed for user librenms
+sudo[234382]:     root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/systemctl restart syslog-ng
+sudo[234382]: pam_unix(sudo:session): session opened for user root(uid=0) by nhandinhvan(uid=0)
+systemd[1]: Starting syslog-ng.service - System Logger Daemon...
+(yslog-ng)[234386]: syslog-ng.service: Referenced but unset environment variable evaluates to an empty string: SYSLOGNG_OPTS
+"syslog-ng[234386]: [2025-05-13T22:07:12.516622] smart-multi-line: error opening smart-multi-line.fsm file; filename='/usr/share/syslog-ng/smart-multi-line.fsm', error='No such file or directory (2)'"
+"syslog-ng[234386]: [2025-05-13T22:07:12.516649] smart-multi-line: your smart-multi-line.fsm seems to be empty or non-existent, automatic multi-line log extraction will probably not work; filename='/usr/share/syslog-ng/smart-multi-line.fsm'"
+"syslog-ng[234386]: [2025-05-13T22:07:12.519375] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 4.3 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.38'"
+"syslog-ng[234386]: [2025-05-13T22:07:12.520783] WARNING: Your configuration file uses an obsoleted keyword, please update your configuration; keyword='stats_freq', change='Use the stats() block. E.g. stats(freq(1));', location='/etc/syslog-ng/syslog-ng.conf:10:4'"
+"syslog-ng[234386]: [2025-05-13T22:07:12.527815] WARNING: Duplicate configuration objects (sources, destinations, ...) are not allowed by default starting with syslog-ng 3.3, add ""@define allow-config-dups 1"" to your configuration to re-enable;"
+"syslog-ng[234386]: Error parsing config, duplicate destination definition in /etc/syslog-ng/conf.d/librenms.conf:15:1-17:2:"
+"syslog-ng[234386]: 10              template(""$HOST||$FACILITY||$PRIORITY||$LEVEL||$MSG\n"")"
+syslog-ng[234386]: 11          );
+syslog-ng[234386]: 12      };
+syslog-ng[234386]: 13
+syslog-ng[234386]: 14      # Ghi log vÃ o file Ä‘á»ƒ kiá»ƒm tra thá»§ cÃ´ng
+syslog-ng[234386]: 15----> destination d_debug {
+syslog-ng[234386]: 15----> ^^^^^^^^^^^^^^^^^^^^^^
+"syslog-ng[234386]: 16---->     file(""/var/log/remote.log"");"
+syslog-ng[234386]: 17----> };
+syslog-ng[234386]: 18
+syslog-ng[234386]: 19      # Pipeline xá»­ lÃ½ log
+syslog-ng[234386]: 20      log {
+syslog-ng[234386]: Included from /etc/syslog-ng/syslog-ng.conf:160:1-160:1:
+syslog-ng[234386]: syslog-ng documentation: https://www.syslog-ng.com/technical-documents/list/syslog-ng-open-source-edition
+syslog-ng[234386]: contact:
+syslog-ng[234386]: 	GitHub Project: https://github.com/syslog-ng/syslog-ng
+syslog-ng[234386]: 	Chat with the Developers: https://gitter.im/syslog-ng/syslog-ng
+syslog-ng[234386]: 	Mailing List: https://lists.balabit.hu/mailman/listinfo/syslog-ng
+"systemd[1]: syslog-ng.service: Main process exited, code=exited, status=1/FAILURE"
+systemd[1]: syslog-ng.service: Failed with result 'exit-code'.
+systemd[1]: Failed to start syslog-ng.service - System Logger Daemon.
+sudo[234382]: pam_unix(sudo:session): session closed for user root
+"systemd[1]: syslog-ng.service: Scheduled restart job, restart counter is at 1."
+systemd[1]: Starting syslog-ng.service - System Logger Daemon...
+(yslog-ng)[234399]: syslog-ng.service: Referenced but unset environment variable evaluates to an empty string: SYSLOGNG_OPTS
+"syslog-ng[234399]: [2025-05-13T22:07:12.788822] smart-multi-line: error opening smart-multi-line.fsm file; filename='/usr/share/syslog-ng/smart-multi-line.fsm', error='No such file or directory (2)'"
+"syslog-ng[234399]: [2025-05-13T22:07:12.788849] smart-multi-line: your smart-multi-line.fsm seems to be empty or non-existent, automatic multi-line log extraction will probably not work; filename='/usr/share/syslog-ng/smart-multi-line.fsm'"
+"syslog-ng[234399]: [2025-05-13T22:07:12.793359] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 4.3 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.38'"
+"syslog-ng[234399]: [2025-05-13T22:07:12.795261] WARNING: Your configuration file uses an obsoleted keyword, please update your configuration; keyword='stats_freq', change='Use the stats() block. E.g. stats(freq(1));', location='/etc/syslog-ng/syslog-ng.conf:10:4'"
+"syslog-ng[234399]: [2025-05-13T22:07:12.800169] WARNING: Duplicate configuration objects (sources, destinations, ...) are not allowed by default starting with syslog-ng 3.3, add ""@define allow-config-dups 1"" to your configuration to re-enable;"
+"syslog-ng[234399]: Error parsing config, duplicate destination definition in /etc/syslog-ng/conf.d/librenms.conf:15:1-17:2:"
+"syslog-ng[234399]: 10              template(""$HOST||$FACILITY||$PRIORITY||$LEVEL||$MSG\n"")"
+syslog-ng[234399]: 11          );
+syslog-ng[234399]: 12      };
+syslog-ng[234399]: 13
+syslog-ng[234399]: 14      # Ghi log vÃ o file Ä‘á»ƒ kiá»ƒm tra thá»§ cÃ´ng
+syslog-ng[234399]: 15----> destination d_debug {
+syslog-ng[234399]: 15----> ^^^^^^^^^^^^^^^^^^^^^^
+"syslog-ng[234399]: 16---->     file(""/var/log/remote.log"");"
+syslog-ng[234399]: 17----> };
+syslog-ng[234399]: 18
+syslog-ng[234399]: 19      # Pipeline xá»­ lÃ½ log
+syslog-ng[234399]: 20      log {
+syslog-ng[234399]: Included from /etc/syslog-ng/syslog-ng.conf:160:1-160:1:
+syslog-ng[234399]: syslog-ng documentation: https://www.syslog-ng.com/technical-documents/list/syslog-ng-open-source-edition
+syslog-ng[234399]: contact:
+syslog-ng[234399]: 	GitHub Project: https://github.com/syslog-ng/syslog-ng
+syslog-ng[234399]: 	Chat with the Developers: https://gitter.im/syslog-ng/syslog-ng
+syslog-ng[234399]: 	Mailing List: https://lists.balabit.hu/mailman/listinfo/syslog-ng
+"systemd[1]: syslog-ng.service: Main process exited, code=exited, status=1/FAILURE"
+systemd[1]: syslog-ng.service: Failed with result 'exit-code'.
+systemd[1]: Failed to start syslog-ng.service - System Logger Daemon.
+"systemd[1]: syslog-ng.service: Scheduled restart job, restart counter is at 2."
+systemd[1]: Starting syslog-ng.service - System Logger Daemon...
+(yslog-ng)[234409]: syslog-ng.service: Referenced but unset environment variable evaluates to an empty string: SYSLOGNG_OPTS
+"syslog-ng[234409]: [2025-05-13T22:07:13.040804] smart-multi-line: error opening smart-multi-line.fsm file; filename='/usr/share/syslog-ng/smart-multi-line.fsm', error='No such file or directory (2)'"
+"syslog-ng[234409]: [2025-05-13T22:07:13.040839] smart-multi-line: your smart-multi-line.fsm seems to be empty or non-existent, automatic multi-line log extraction will probably not work; filename='/usr/share/syslog-ng/smart-multi-line.fsm'"
+"syslog-ng[234409]: [2025-05-13T22:07:13.043627] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 4.3 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.38'"
+"syslog-ng[234409]: [2025-05-13T22:07:13.044200] WARNING: Your configuration file uses an obsoleted keyword, please update your configuration; keyword='stats_freq', change='Use the stats() block. E.g. stats(freq(1));', location='/etc/syslog-ng/syslog-ng.conf:10:4'"
+"syslog-ng[234409]: [2025-05-13T22:07:13.047713] WARNING: Duplicate configuration objects (sources, destinations, ...) are not allowed by default starting with syslog-ng 3.3, add ""@define allow-config-dups 1"" to your configuration to re-enable;"
+"syslog-ng[234409]: Error parsing config, duplicate destination definition in /etc/syslog-ng/conf.d/librenms.conf:15:1-17:2:"
+"syslog-ng[234409]: 10              template(""$HOST||$FACILITY||$PRIORITY||$LEVEL||$MSG\n"")"
+syslog-ng[234409]: 11          );
+syslog-ng[234409]: 12      };
+syslog-ng[234409]: 13
+syslog-ng[234409]: 14      # Ghi log vÃ o file Ä‘á»ƒ kiá»ƒm tra thá»§ cÃ´ng
+syslog-ng[234409]: 15----> destination d_debug {
+syslog-ng[234409]: 15----> ^^^^^^^^^^^^^^^^^^^^^^
+"syslog-ng[234409]: 16---->     file(""/var/log/remote.log"");"
+syslog-ng[234409]: 17----> };
+syslog-ng[234409]: 18
+syslog-ng[234409]: 19      # Pipeline xá»­ lÃ½ log
+syslog-ng[234409]: 20      log {
+syslog-ng[234409]: Included from /etc/syslog-ng/syslog-ng.conf:160:1-160:1:
+syslog-ng[234409]: syslog-ng documentation: https://www.syslog-ng.com/technical-documents/list/syslog-ng-open-source-edition
+syslog-ng[234409]: contact:
+syslog-ng[234409]: 	GitHub Project: https://github.com/syslog-ng/syslog-ng
+syslog-ng[234409]: 	Chat with the Developers: https://gitter.im/syslog-ng/syslog-ng
+syslog-ng[234409]: 	Mailing List: https://lists.balabit.hu/mailman/listinfo/syslog-ng
+"systemd[1]: syslog-ng.service: Main process exited, code=exited, status=1/FAILURE"
+systemd[1]: syslog-ng.service: Failed with result 'exit-code'.
+systemd[1]: Failed to start syslog-ng.service - System Logger Daemon.
+"systemd[1]: syslog-ng.service: Scheduled restart job, restart counter is at 3."
+systemd[1]: Starting syslog-ng.service - System Logger Daemon...
+(yslog-ng)[234418]: syslog-ng.service: Referenced but unset environment variable evaluates to an empty string: SYSLOGNG_OPTS
+"syslog-ng[234418]: [2025-05-13T22:07:13.286642] smart-multi-line: error opening smart-multi-line.fsm file; filename='/usr/share/syslog-ng/smart-multi-line.fsm', error='No such file or directory (2)'"
+"syslog-ng[234418]: [2025-05-13T22:07:13.286671] smart-multi-line: your smart-multi-line.fsm seems to be empty or non-existent, automatic multi-line log extraction will probably not work; filename='/usr/share/syslog-ng/smart-multi-line.fsm'"
+"syslog-ng[234418]: [2025-05-13T22:07:13.289478] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 4.3 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.38'"
+"syslog-ng[234418]: [2025-05-13T22:07:13.289926] WARNING: Your configuration file uses an obsoleted keyword, please update your configuration; keyword='stats_freq', change='Use the stats() block. E.g. stats(freq(1));', location='/etc/syslog-ng/syslog-ng.conf:10:4'"
+"syslog-ng[234418]: [2025-05-13T22:07:13.293169] WARNING: Duplicate configuration objects (sources, destinations, ...) are not allowed by default starting with syslog-ng 3.3, add ""@define allow-config-dups 1"" to your configuration to re-enable;"
+"syslog-ng[234418]: Error parsing config, duplicate destination definition in /etc/syslog-ng/conf.d/librenms.conf:15:1-17:2:"
+"syslog-ng[234418]: 10              template(""$HOST||$FACILITY||$PRIORITY||$LEVEL||$MSG\n"")"
+syslog-ng[234418]: 11          );
+syslog-ng[234418]: 12      };
+syslog-ng[234418]: 13
+syslog-ng[234418]: 14      # Ghi log vÃ o file Ä‘á»ƒ kiá»ƒm tra thá»§ cÃ´ng
+syslog-ng[234418]: 15----> destination d_debug {
+syslog-ng[234418]: 15----> ^^^^^^^^^^^^^^^^^^^^^^
+"syslog-ng[234418]: 16---->     file(""/var/log/remote.log"");"
+syslog-ng[234418]: 17----> };
+syslog-ng[234418]: 18
+syslog-ng[234418]: 19      # Pipeline xá»­ lÃ½ log
+syslog-ng[234418]: 20      log {
+syslog-ng[234418]: Included from /etc/syslog-ng/syslog-ng.conf:160:1-160:1:
+syslog-ng[234418]: syslog-ng documentation: https://www.syslog-ng.com/technical-documents/list/syslog-ng-open-source-edition
+syslog-ng[234418]: contact:
+syslog-ng[234418]: 	GitHub Project: https://github.com/syslog-ng/syslog-ng
+syslog-ng[234418]: 	Chat with the Developers: https://gitter.im/syslog-ng/syslog-ng
+syslog-ng[234418]: 	Mailing List: https://lists.balabit.hu/mailman/listinfo/syslog-ng
+"systemd[1]: syslog-ng.service: Main process exited, code=exited, status=1/FAILURE"
+systemd[1]: syslog-ng.service: Failed with result 'exit-code'.
+systemd[1]: Failed to start syslog-ng.service - System Logger Daemon.
+"systemd[1]: syslog-ng.service: Scheduled restart job, restart counter is at 4."
+systemd[1]: Starting syslog-ng.service - System Logger Daemon...
+(yslog-ng)[234429]: syslog-ng.service: Referenced but unset environment variable evaluates to an empty string: SYSLOGNG_OPTS
+"syslog-ng[234429]: [2025-05-13T22:07:13.537015] smart-multi-line: error opening smart-multi-line.fsm file; filename='/usr/share/syslog-ng/smart-multi-line.fsm', error='No such file or directory (2)'"
+"syslog-ng[234429]: [2025-05-13T22:07:13.537060] smart-multi-line: your smart-multi-line.fsm seems to be empty or non-existent, automatic multi-line log extraction will probably not work; filename='/usr/share/syslog-ng/smart-multi-line.fsm'"
+"syslog-ng[234429]: [2025-05-13T22:07:13.540564] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 4.3 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.38'"
+"syslog-ng[234429]: [2025-05-13T22:07:13.541107] WARNING: Your configuration file uses an obsoleted keyword, please update your configuration; keyword='stats_freq', change='Use the stats() block. E.g. stats(freq(1));', location='/etc/syslog-ng/syslog-ng.conf:10:4'"
+"syslog-ng[234429]: [2025-05-13T22:07:13.545117] WARNING: Duplicate configuration objects (sources, destinations, ...) are not allowed by default starting with syslog-ng 3.3, add ""@define allow-config-dups 1"" to your configuration to re-enable;"
+"syslog-ng[234429]: Error parsing config, duplicate destination definition in /etc/syslog-ng/conf.d/librenms.conf:15:1-17:2:"
+"syslog-ng[234429]: 10              template(""$HOST||$FACILITY||$PRIORITY||$LEVEL||$MSG\n"")"
+syslog-ng[234429]: 11          );
+syslog-ng[234429]: 12      };
+syslog-ng[234429]: 13
+syslog-ng[234429]: 14      # Ghi log vÃ o file Ä‘á»ƒ kiá»ƒm tra thá»§ cÃ´ng
+syslog-ng[234429]: 15----> destination d_debug {
+syslog-ng[234429]: 15----> ^^^^^^^^^^^^^^^^^^^^^^
+"syslog-ng[234429]: 16---->     file(""/var/log/remote.log"");"
+syslog-ng[234429]: 17----> };
+syslog-ng[234429]: 18
+syslog-ng[234429]: 19      # Pipeline xá»­ lÃ½ log
+syslog-ng[234429]: 20      log {
+syslog-ng[234429]: Included from /etc/syslog-ng/syslog-ng.conf:160:1-160:1:
+syslog-ng[234429]: syslog-ng documentation: https://www.syslog-ng.com/technical-documents/list/syslog-ng-open-source-edition
+syslog-ng[234429]: contact:
+syslog-ng[234429]: 	GitHub Project: https://github.com/syslog-ng/syslog-ng
+syslog-ng[234429]: 	Chat with the Developers: https://gitter.im/syslog-ng/syslog-ng
+syslog-ng[234429]: 	Mailing List: https://lists.balabit.hu/mailman/listinfo/syslog-ng
+"systemd[1]: syslog-ng.service: Main process exited, code=exited, status=1/FAILURE"
+systemd[1]: syslog-ng.service: Failed with result 'exit-code'.
+systemd[1]: Failed to start syslog-ng.service - System Logger Daemon.
+"systemd[1]: syslog-ng.service: Scheduled restart job, restart counter is at 5."
+systemd[1]: syslog-ng.service: Start request repeated too quickly.
+systemd[1]: syslog-ng.service: Failed with result 'exit-code'.
+systemd[1]: Failed to start syslog-ng.service - System Logger Daemon.
+CRON[233697]: pam_unix(cron:session): session closed for user librenms
+CRON[232112]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[235284]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[235288]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[235289]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[235291]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[235292]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[235293]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[235286]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[235285]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[235294]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[235290]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[235287]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[235295]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[235296]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[235298]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[235285]: pam_unix(cron:session): session closed for user librenms
+CRON[235284]: pam_unix(cron:session): session closed for user librenms
+CRON[235286]: pam_unix(cron:session): session closed for user librenms
+CRON[235287]: pam_unix(cron:session): session closed for user librenms
+CRON[235289]: pam_unix(cron:session): session closed for user librenms
+CRON[235288]: pam_unix(cron:session): session closed for user librenms
+CRON[233699]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: Starting phpsessionclean.service - Clean php session files...
+systemd[1]: phpsessionclean.service: Deactivated successfully.
+systemd[1]: Finished phpsessionclean.service - Clean php session files.
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[236908]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+CRON[236912]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[236916]: (root) CMD (  [ -x /usr/lib/php/sessionclean ] && if [ ! -d /run/systemd/system ]; then /usr/lib/php/sessionclean; fi)
+CRON[236913]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[236917]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[236918]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[236908]: pam_unix(cron:session): session closed for user root
+CRON[236909]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[236910]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[236914]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[236911]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[236921]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[236922]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[236915]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[236923]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[236925]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[236926]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[236909]: pam_unix(cron:session): session closed for user librenms
+CRON[236914]: pam_unix(cron:session): session closed for user librenms
+CRON[236910]: pam_unix(cron:session): session closed for user librenms
+CRON[236911]: pam_unix(cron:session): session closed for user librenms
+CRON[236912]: pam_unix(cron:session): session closed for user librenms
+CRON[236913]: pam_unix(cron:session): session closed for user librenms
+CRON[235290]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+systemd[1]: sysstat-collect.service: Deactivated successfully.
+systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[238491]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[238490]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[238496]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[238497]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[238489]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[238492]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[238494]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[238493]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[238500]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[238501]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[238495]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[238502]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[238503]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[238504]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[238494]: pam_unix(cron:session): session closed for user librenms
+CRON[238490]: pam_unix(cron:session): session closed for user librenms
+CRON[238492]: pam_unix(cron:session): session closed for user librenms
+CRON[238491]: pam_unix(cron:session): session closed for user librenms
+CRON[238489]: pam_unix(cron:session): session closed for user librenms
+CRON[238493]: pam_unix(cron:session): session closed for user librenms
+CRON[236915]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[240060]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[240064]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[240065]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[240063]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[240067]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[240066]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[240068]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[240061]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[240069]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[240070]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[240062]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[240071]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[240072]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[240073]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[240060]: pam_unix(cron:session): session closed for user librenms
+CRON[240065]: pam_unix(cron:session): session closed for user librenms
+CRON[240061]: pam_unix(cron:session): session closed for user librenms
+CRON[240062]: pam_unix(cron:session): session closed for user librenms
+CRON[240063]: pam_unix(cron:session): session closed for user librenms
+CRON[240064]: pam_unix(cron:session): session closed for user librenms
+sudo[241052]:     root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/systemctl restart syslog-ng
+sudo[241052]: pam_unix(sudo:session): session opened for user root(uid=0) by nhandinhvan(uid=0)
+systemd[1]: Starting syslog-ng.service - System Logger Daemon...
+(yslog-ng)[241056]: syslog-ng.service: Referenced but unset environment variable evaluates to an empty string: SYSLOGNG_OPTS
+"syslog-ng[241056]: [2025-05-13T22:11:32.431933] smart-multi-line: error opening smart-multi-line.fsm file; filename='/usr/share/syslog-ng/smart-multi-line.fsm', error='No such file or directory (2)'"
+"syslog-ng[241056]: [2025-05-13T22:11:32.431974] smart-multi-line: your smart-multi-line.fsm seems to be empty or non-existent, automatic multi-line log extraction will probably not work; filename='/usr/share/syslog-ng/smart-multi-line.fsm'"
+"syslog-ng[241056]: [2025-05-13T22:11:32.434957] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 4.3 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.38'"
+"syslog-ng[241056]: [2025-05-13T22:11:32.435365] WARNING: Your configuration file uses an obsoleted keyword, please update your configuration; keyword='stats_freq', change='Use the stats() block. E.g. stats(freq(1));', location='/etc/syslog-ng/syslog-ng.conf:10:4'"
+systemd[1]: Started syslog-ng.service - System Logger Daemon.
+sudo[241052]: pam_unix(sudo:session): session closed for user root
+CRON[238495]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[241648]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[241652]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[241653]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[241655]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[241656]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[241650]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[241657]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[241651]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[241649]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[241654]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[241658]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[241659]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[241660]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[241661]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[241650]: pam_unix(cron:session): session closed for user librenms
+CRON[241653]: pam_unix(cron:session): session closed for user librenms
+CRON[241648]: pam_unix(cron:session): session closed for user librenms
+CRON[241649]: pam_unix(cron:session): session closed for user librenms
+CRON[241651]: pam_unix(cron:session): session closed for user librenms
+CRON[241652]: pam_unix(cron:session): session closed for user librenms
+CRON[240066]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[243224]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[243228]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[243226]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[243225]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[243227]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[243229]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[243231]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[243233]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[243234]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[243232]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[243230]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[243235]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[243237]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[243236]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[243224]: pam_unix(cron:session): session closed for user librenms
+CRON[243226]: pam_unix(cron:session): session closed for user librenms
+CRON[243225]: pam_unix(cron:session): session closed for user librenms
+CRON[243227]: pam_unix(cron:session): session closed for user librenms
+CRON[243229]: pam_unix(cron:session): session closed for user librenms
+CRON[243228]: pam_unix(cron:session): session closed for user librenms
+CRON[241654]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[244802]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[244806]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[244803]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[244807]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[244801]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[244808]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[244809]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[244805]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[244811]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[244810]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[244812]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[244804]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[244813]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[244815]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[244804]: pam_unix(cron:session): session closed for user librenms
+CRON[244806]: pam_unix(cron:session): session closed for user librenms
+CRON[244803]: pam_unix(cron:session): session closed for user librenms
+CRON[244801]: pam_unix(cron:session): session closed for user librenms
+CRON[244802]: pam_unix(cron:session): session closed for user librenms
+CRON[244805]: pam_unix(cron:session): session closed for user librenms
+CRON[243230]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[246416]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+CRON[246420]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[246424]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+CRON[246421]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[246425]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[246418]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[246419]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[246426]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[246423]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[246422]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[246427]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[246417]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[246428]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[246429]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[246431]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[246430]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[246416]: pam_unix(cron:session): session closed for user root
+CRON[246418]: pam_unix(cron:session): session closed for user librenms
+CRON[246419]: pam_unix(cron:session): session closed for user librenms
+CRON[246422]: pam_unix(cron:session): session closed for user librenms
+CRON[246420]: pam_unix(cron:session): session closed for user librenms
+CRON[246417]: pam_unix(cron:session): session closed for user librenms
+CRON[246421]: pam_unix(cron:session): session closed for user librenms
+CRON[244807]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[247995]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[247999]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[248002]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[248003]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[248000]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[247997]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[247996]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[247998]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[248001]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[248004]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[248005]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[248008]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[248006]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[248007]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[247998]: pam_unix(cron:session): session closed for user librenms
+CRON[247997]: pam_unix(cron:session): session closed for user librenms
+CRON[247996]: pam_unix(cron:session): session closed for user librenms
+CRON[248000]: pam_unix(cron:session): session closed for user librenms
+CRON[247995]: pam_unix(cron:session): session closed for user librenms
+CRON[247999]: pam_unix(cron:session): session closed for user librenms
+CRON[246423]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[249576]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+CRON[249584]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+CRON[249581]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[249580]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[249585]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[249586]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[249576]: pam_unix(cron:session): session closed for user root
+CRON[249582]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[249578]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[249583]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[249577]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[249588]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[249589]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[249591]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[249593]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[249579]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[249594]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[249577]: pam_unix(cron:session): session closed for user librenms
+CRON[249578]: pam_unix(cron:session): session closed for user librenms
+CRON[249582]: pam_unix(cron:session): session closed for user librenms
+CRON[249580]: pam_unix(cron:session): session closed for user librenms
+CRON[249579]: pam_unix(cron:session): session closed for user librenms
+CRON[249581]: pam_unix(cron:session): session closed for user librenms
+CRON[248001]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[251138]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[251142]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[251143]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[251145]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[251146]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[251147]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[251139]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[251141]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[251140]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[251144]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[251150]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[251153]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[251154]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[251155]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[251139]: pam_unix(cron:session): session closed for user librenms
+CRON[251138]: pam_unix(cron:session): session closed for user librenms
+CRON[251143]: pam_unix(cron:session): session closed for user librenms
+CRON[251141]: pam_unix(cron:session): session closed for user librenms
+CRON[251140]: pam_unix(cron:session): session closed for user librenms
+CRON[251142]: pam_unix(cron:session): session closed for user librenms
+CRON[249583]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[252769]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[252765]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[252771]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[252768]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[252764]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[252766]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[252772]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[252767]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[252773]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[252774]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[252770]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[252775]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[252776]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[252777]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[252765]: pam_unix(cron:session): session closed for user librenms
+CRON[252764]: pam_unix(cron:session): session closed for user librenms
+CRON[252767]: pam_unix(cron:session): session closed for user librenms
+CRON[252766]: pam_unix(cron:session): session closed for user librenms
+CRON[252769]: pam_unix(cron:session): session closed for user librenms
+CRON[252768]: pam_unix(cron:session): session closed for user librenms
+CRON[251144]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+systemd[1]: sysstat-collect.service: Deactivated successfully.
+systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[254372]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[254379]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[254373]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[254377]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[254376]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[254374]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[254375]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[254380]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[254382]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[254378]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[254384]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[254381]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[254385]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[254383]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[254373]: pam_unix(cron:session): session closed for user librenms
+CRON[254377]: pam_unix(cron:session): session closed for user librenms
+CRON[254374]: pam_unix(cron:session): session closed for user librenms
+CRON[254372]: pam_unix(cron:session): session closed for user librenms
+CRON[254375]: pam_unix(cron:session): session closed for user librenms
+CRON[254376]: pam_unix(cron:session): session closed for user librenms
+CRON[252770]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[255919]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[255918]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[255914]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[255917]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[255921]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[255920]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[255922]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[255915]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[255924]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[255916]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[255923]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[255925]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[255926]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[255927]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[255915]: pam_unix(cron:session): session closed for user librenms
+CRON[255914]: pam_unix(cron:session): session closed for user librenms
+CRON[255919]: pam_unix(cron:session): session closed for user librenms
+CRON[255917]: pam_unix(cron:session): session closed for user librenms
+CRON[255916]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting fwupd-refresh.service - Refresh fwupd metadata and update motd...
+"dbus-daemon[707]: [system] Activating via systemd: service name='org.freedesktop.fwupd' unit='fwupd.service' requested by ':1.353' (uid=989 pid=256340 comm=""/usr/bin/fwupdmgr refresh"" label=""unconfined"")"
+systemd[1]: Starting fwupd.service - Firmware update daemon...
+fwupd[256390]: 15:21:08.061 FuMain               Daemon ready for requests (locale en_US.UTF-8)
+dbus-daemon[707]: [system] Successfully activated service 'org.freedesktop.fwupd'
+systemd[1]: Started fwupd.service - Firmware update daemon.
+systemd[1]: fwupd-refresh.service: Deactivated successfully.
+systemd[1]: Finished fwupd-refresh.service - Refresh fwupd metadata and update motd.
+CRON[255918]: pam_unix(cron:session): session closed for user librenms
+CRON[254378]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[257499]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[257502]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[257500]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[257506]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[257501]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[257510]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[257509]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[257511]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[257504]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[257505]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[257507]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[257513]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[257514]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[257515]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[257500]: pam_unix(cron:session): session closed for user librenms
+CRON[257501]: pam_unix(cron:session): session closed for user librenms
+CRON[257506]: pam_unix(cron:session): session closed for user librenms
+CRON[257499]: pam_unix(cron:session): session closed for user librenms
+CRON[257504]: pam_unix(cron:session): session closed for user librenms
+CRON[257505]: pam_unix(cron:session): session closed for user librenms
+CRON[255920]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[259087]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[259083]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[259086]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[259084]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[259091]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[259093]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[259090]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[259085]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[259088]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[259092]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[259089]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[259094]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[259095]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[259096]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[259083]: pam_unix(cron:session): session closed for user librenms
+CRON[259088]: pam_unix(cron:session): session closed for user librenms
+CRON[259084]: pam_unix(cron:session): session closed for user librenms
+CRON[259086]: pam_unix(cron:session): session closed for user librenms
+CRON[259085]: pam_unix(cron:session): session closed for user librenms
+CRON[259087]: pam_unix(cron:session): session closed for user librenms
+CRON[257507]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[260651]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[260647]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[260649]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[260654]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[260652]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[260648]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[260657]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[260655]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[260653]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[260650]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[260658]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[260656]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[260659]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[260660]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[260648]: pam_unix(cron:session): session closed for user librenms
+CRON[260647]: pam_unix(cron:session): session closed for user librenms
+CRON[260650]: pam_unix(cron:session): session closed for user librenms
+CRON[260652]: pam_unix(cron:session): session closed for user librenms
+CRON[260649]: pam_unix(cron:session): session closed for user librenms
+CRON[260651]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[261596]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+CRON[261604]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+CRON[261600]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[261606]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[261601]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[261607]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[261603]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[261599]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[261602]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[261598]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[261596]: pam_unix(cron:session): session closed for user root
+CRON[261597]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[261608]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[261610]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[261611]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[261612]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[261613]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[261600]: pam_unix(cron:session): session closed for user librenms
+CRON[261598]: pam_unix(cron:session): session closed for user librenms
+CRON[261597]: pam_unix(cron:session): session closed for user librenms
+CRON[261602]: pam_unix(cron:session): session closed for user librenms
+CRON[261599]: pam_unix(cron:session): session closed for user librenms
+CRON[259089]: pam_unix(cron:session): session closed for user librenms
+CRON[261601]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[262921]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[262920]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[262924]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[262918]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[262919]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[262925]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[262917]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[262926]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[262927]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[262928]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[262922]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[262929]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[262923]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[262934]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[262918]: pam_unix(cron:session): session closed for user librenms
+CRON[262917]: pam_unix(cron:session): session closed for user librenms
+CRON[262919]: pam_unix(cron:session): session closed for user librenms
+CRON[262922]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: fwupd.service: Deactivated successfully.
+CRON[262921]: pam_unix(cron:session): session closed for user librenms
+CRON[262920]: pam_unix(cron:session): session closed for user librenms
+CRON[260653]: pam_unix(cron:session): session closed for user librenms
+CRON[261603]: pam_unix(cron:session): session closed for user librenms
+sudo[264729]:     root : TTY=pts/1 ; PWD=/home/nhandinhvan ; USER=root ; COMMAND=/usr/bin/cat /var/log/syslog /var/log/remote.log
+sudo[264729]: pam_unix(sudo:session): session opened for user root(uid=0) by nhandinhvan(uid=0)
+sudo[264729]: pam_unix(sudo:session): session closed for user root
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[264833]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[264838]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[264837]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[264835]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[264840]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[264836]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[264843]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[264841]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[264844]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[264839]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[264842]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[264834]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[264845]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[264846]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[264833]: pam_unix(cron:session): session closed for user librenms
+CRON[264838]: pam_unix(cron:session): session closed for user librenms
+CRON[264834]: pam_unix(cron:session): session closed for user librenms
+CRON[264835]: pam_unix(cron:session): session closed for user librenms
+CRON[264836]: pam_unix(cron:session): session closed for user librenms
+CRON[264837]: pam_unix(cron:session): session closed for user librenms
+sudo[265825]:     root : TTY=pts/1 ; PWD=/home/nhandinhvan ; USER=root ; COMMAND=/usr/bin/cat /var/log/syslog /var/log/remote.log
+sudo[265825]: pam_unix(sudo:session): session opened for user root(uid=0) by nhandinhvan(uid=0)
+sudo[265825]: pam_unix(sudo:session): session closed for user root
+CRON[262923]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[266441]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[266442]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[266439]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[266440]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[266438]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[266437]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[266446]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[266445]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[266447]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[266448]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[266443]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[266452]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[266444]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[266455]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[266438]: pam_unix(cron:session): session closed for user librenms
+CRON[266443]: pam_unix(cron:session): session closed for user librenms
+CRON[266439]: pam_unix(cron:session): session closed for user librenms
+CRON[266437]: pam_unix(cron:session): session closed for user librenms
+CRON[266440]: pam_unix(cron:session): session closed for user librenms
+CRON[266441]: pam_unix(cron:session): session closed for user librenms
+CRON[264839]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[267977]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[267978]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[267980]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[267974]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[267975]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[267973]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[267979]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[267981]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[267983]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[267976]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[267982]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[267984]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[267986]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[267985]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[267974]: pam_unix(cron:session): session closed for user librenms
+CRON[267975]: pam_unix(cron:session): session closed for user librenms
+CRON[267973]: pam_unix(cron:session): session closed for user librenms
+CRON[267976]: pam_unix(cron:session): session closed for user librenms
+CRON[267978]: pam_unix(cron:session): session closed for user librenms
+CRON[267977]: pam_unix(cron:session): session closed for user librenms
+CRON[266444]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+systemd[1]: sysstat-collect.service: Deactivated successfully.
+systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[269571]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[269577]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[269573]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[269570]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[269574]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[269572]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[269578]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[269579]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[269581]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[269580]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[269576]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[269582]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[269575]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[269584]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[269571]: pam_unix(cron:session): session closed for user librenms
+CRON[269573]: pam_unix(cron:session): session closed for user librenms
+CRON[269572]: pam_unix(cron:session): session closed for user librenms
+CRON[269570]: pam_unix(cron:session): session closed for user librenms
+CRON[269575]: pam_unix(cron:session): session closed for user librenms
+CRON[269574]: pam_unix(cron:session): session closed for user librenms
+CRON[267979]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[271135]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[271139]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[271140]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[271142]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[271143]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[271137]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[271144]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[271136]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[271138]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[271141]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[271145]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[271146]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[271147]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[271148]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[271136]: pam_unix(cron:session): session closed for user librenms
+CRON[271135]: pam_unix(cron:session): session closed for user librenms
+CRON[271137]: pam_unix(cron:session): session closed for user librenms
+CRON[271138]: pam_unix(cron:session): session closed for user librenms
+CRON[271140]: pam_unix(cron:session): session closed for user librenms
+CRON[271139]: pam_unix(cron:session): session closed for user librenms
+CRON[269576]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[272717]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[272721]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[272724]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[272720]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[272719]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[272725]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[272718]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[272723]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[272726]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[272722]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[272727]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[272728]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[272730]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[272729]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[272718]: pam_unix(cron:session): session closed for user librenms
+CRON[272720]: pam_unix(cron:session): session closed for user librenms
+CRON[272722]: pam_unix(cron:session): session closed for user librenms
+CRON[272717]: pam_unix(cron:session): session closed for user librenms
+CRON[272719]: pam_unix(cron:session): session closed for user librenms
+CRON[272721]: pam_unix(cron:session): session closed for user librenms
+CRON[271141]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[274367]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[274368]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[274363]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[274364]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[274365]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[274366]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[274371]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[274372]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[274369]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[274370]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[274375]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[274373]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[274376]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[274374]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[274365]: pam_unix(cron:session): session closed for user librenms
+CRON[274368]: pam_unix(cron:session): session closed for user librenms
+CRON[274364]: pam_unix(cron:session): session closed for user librenms
+CRON[274363]: pam_unix(cron:session): session closed for user librenms
+CRON[274366]: pam_unix(cron:session): session closed for user librenms
+CRON[274367]: pam_unix(cron:session): session closed for user librenms
+CRON[272723]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[275903]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[275899]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[275904]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[275906]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[275907]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[275908]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[275902]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[275901]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[275900]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[275905]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[275909]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[275910]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[275911]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[275912]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[275900]: pam_unix(cron:session): session closed for user librenms
+CRON[275902]: pam_unix(cron:session): session closed for user librenms
+CRON[275899]: pam_unix(cron:session): session closed for user librenms
+CRON[275904]: pam_unix(cron:session): session closed for user librenms
+CRON[275901]: pam_unix(cron:session): session closed for user librenms
+CRON[275903]: pam_unix(cron:session): session closed for user librenms
+sshd[164785]: Received disconnect from 192.168.139.30 port 50545:11: disconnected by user
+sshd[164785]: Disconnected from user nhandinhvan 192.168.139.30 port 50545
+sshd[164579]: pam_unix(sshd:session): session closed for user nhandinhvan
+systemd-logind[734]: Session 770 logged out. Waiting for processes to exit.
+sudo[168721]: pam_unix(sudo-i:session): session closed for user root
+systemd[1]: session-770.scope: Deactivated successfully.
+systemd[1]: session-770.scope: Consumed 4.015s CPU time.
+systemd-logind[734]: Removed session 770.
+CRON[274369]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Stopping user@1000.service - User Manager for UID 1000...
+systemd[164685]: Activating special unit exit.target...
+systemd[164685]: Stopped target default.target - Main User Target.
+systemd[164685]: Stopped target basic.target - Basic System.
+systemd[164685]: Stopped target paths.target - Paths.
+systemd[164685]: Stopped target sockets.target - Sockets.
+systemd[164685]: Stopped target timers.target - Timers.
+systemd[164685]: Stopped launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+systemd[164685]: Closed dbus.socket - D-Bus User Message Bus Socket.
+systemd[164685]: Closed dirmngr.socket - GnuPG network certificate management daemon.
+systemd[164685]: Closed gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+systemd[164685]: Closed gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+systemd[164685]: Stopping gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+systemd[164685]: Closed gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+systemd[164685]: Closed keyboxd.socket - GnuPG public key management service.
+systemd[164685]: Closed pk-debconf-helper.socket - debconf communication socket.
+systemd[164685]: Closed snapd.session-agent.socket - REST API socket for snapd user session agent.
+systemd[164685]: Closed gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+systemd[164685]: Removed slice app.slice - User Application Slice.
+systemd[164685]: Reached target shutdown.target - Shutdown.
+systemd[164685]: Finished systemd-exit.service - Exit the Session.
+systemd[164685]: Reached target exit.target - Exit the Session.
+systemd[1]: user@1000.service: Deactivated successfully.
+systemd[1]: Stopped user@1000.service - User Manager for UID 1000.
+systemd[1]: Stopping user-runtime-dir@1000.service - User Runtime Directory /run/user/1000...
+systemd[1]: run-user-1000.mount: Deactivated successfully.
+systemd[1]: user-runtime-dir@1000.service: Deactivated successfully.
+systemd[1]: Stopped user-runtime-dir@1000.service - User Runtime Directory /run/user/1000.
+systemd[1]: Removed slice user-1000.slice - User Slice of UID 1000.
+systemd[1]: user-1000.slice: Consumed 4.245s CPU time.
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[277507]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[277513]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[277506]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[277505]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+CRON[277515]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+CRON[277514]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[277508]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[277509]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[277517]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[277505]: pam_unix(cron:session): session closed for user root
+CRON[277511]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[277510]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[277512]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[277521]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[277523]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[277524]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[277525]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[277507]: pam_unix(cron:session): session closed for user librenms
+CRON[277508]: pam_unix(cron:session): session closed for user librenms
+CRON[277506]: pam_unix(cron:session): session closed for user librenms
+CRON[277511]: pam_unix(cron:session): session closed for user librenms
+CRON[277509]: pam_unix(cron:session): session closed for user librenms
+sshd[277594]: Accepted password for nhandinhvan from 192.168.139.30 port 51340 ssh2
+sshd[277594]: pam_unix(sshd:session): session opened for user nhandinhvan(uid=1000) by nhandinhvan(uid=0)
+systemd[1]: Created slice user-1000.slice - User Slice of UID 1000.
+systemd[1]: Starting user-runtime-dir@1000.service - User Runtime Directory /run/user/1000...
+systemd-logind[734]: New session 1287 of user nhandinhvan.
+systemd[1]: Finished user-runtime-dir@1000.service - User Runtime Directory /run/user/1000.
+systemd[1]: Starting user@1000.service - User Manager for UID 1000...
+(systemd)[277755]: pam_unix(systemd-user:session): session opened for user nhandinhvan(uid=1000) by nhandinhvan(uid=0)
+systemd[277755]: Queued start job for default target default.target.
+systemd[277755]: Created slice app.slice - User Application Slice.
+systemd[277755]: Started launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+systemd[277755]: Reached target paths.target - Paths.
+systemd[277755]: Reached target timers.target - Timers.
+systemd[277755]: Starting dbus.socket - D-Bus User Message Bus Socket...
+systemd[277755]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+systemd[277755]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+systemd[277755]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+systemd[277755]: Starting gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+systemd[277755]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+systemd[277755]: Listening on keyboxd.socket - GnuPG public key management service.
+systemd[277755]: Listening on pk-debconf-helper.socket - debconf communication socket.
+systemd[277755]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+systemd[277755]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+systemd[277755]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+systemd[277755]: Reached target sockets.target - Sockets.
+systemd[277755]: Reached target basic.target - Basic System.
+systemd[277755]: Reached target default.target - Main User Target.
+systemd[277755]: Startup finished in 215ms.
+systemd[1]: Started user@1000.service - User Manager for UID 1000.
+systemd[1]: Started session-1287.scope - Session 1287 of User nhandinhvan.
+sudo[278252]: nhandinhvan : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/bin/bash
+sudo[278252]: pam_unix(sudo-i:session): session opened for user root(uid=0) by nhandinhvan(uid=1000)
+CRON[277510]: pam_unix(cron:session): session closed for user librenms
+CRON[275905]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[279121]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[279122]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[279126]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[279123]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[279125]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[279127]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[279129]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[279128]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[279130]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[279124]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[279131]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[279133]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[279134]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[279132]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[279121]: pam_unix(cron:session): session closed for user librenms
+CRON[279126]: pam_unix(cron:session): session closed for user librenms
+CRON[279122]: pam_unix(cron:session): session closed for user librenms
+CRON[279123]: pam_unix(cron:session): session closed for user librenms
+CRON[279124]: pam_unix(cron:session): session closed for user librenms
+CRON[279125]: pam_unix(cron:session): session closed for user librenms
+CRON[277512]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[280698]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[280705]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[280699]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[280706]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[280700]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[280707]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[280703]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[280704]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[280702]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[280701]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[280711]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[280712]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[280710]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[280713]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[280698]: pam_unix(cron:session): session closed for user librenms
+CRON[280701]: pam_unix(cron:session): session closed for user librenms
+CRON[280699]: pam_unix(cron:session): session closed for user librenms
+CRON[280700]: pam_unix(cron:session): session closed for user librenms
+CRON[280703]: pam_unix(cron:session): session closed for user librenms
+CRON[280702]: pam_unix(cron:session): session closed for user librenms
+CRON[279127]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[282279]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[282274]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[282278]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[282277]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[282281]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[282276]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[282282]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[282280]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[282283]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[282275]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[282284]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[282286]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[282285]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[282287]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[282275]: pam_unix(cron:session): session closed for user librenms
+CRON[282274]: pam_unix(cron:session): session closed for user librenms
+CRON[282276]: pam_unix(cron:session): session closed for user librenms
+CRON[282277]: pam_unix(cron:session): session closed for user librenms
+CRON[282279]: pam_unix(cron:session): session closed for user librenms
+CRON[282278]: pam_unix(cron:session): session closed for user librenms
+CRON[280704]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: Starting phpsessionclean.service - Clean php session files...
+systemd[1]: phpsessionclean.service: Deactivated successfully.
+systemd[1]: Finished phpsessionclean.service - Clean php session files.
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[283889]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+CRON[283897]: (root) CMD (  [ -x /usr/lib/php/sessionclean ] && if [ ! -d /run/systemd/system ]; then /usr/lib/php/sessionclean; fi)
+CRON[283893]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[283894]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[283898]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[283891]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[283892]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[283896]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[283899]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[283900]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[283890]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[283895]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[283901]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[283902]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[283903]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[283904]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[283889]: pam_unix(cron:session): session closed for user root
+CRON[283893]: pam_unix(cron:session): session closed for user librenms
+CRON[283892]: pam_unix(cron:session): session closed for user librenms
+CRON[283891]: pam_unix(cron:session): session closed for user librenms
+CRON[283890]: pam_unix(cron:session): session closed for user librenms
+CRON[283895]: pam_unix(cron:session): session closed for user librenms
+CRON[283894]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+systemd[1]: sysstat-collect.service: Deactivated successfully.
+systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[282280]: pam_unix(cron:session): session closed for user librenms
+CRON[285550]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[285551]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[285557]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[285558]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[285552]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[285553]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[285554]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[285559]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[285556]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[285560]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[285563]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[285555]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[285564]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[285566]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[285552]: pam_unix(cron:session): session closed for user librenms
+CRON[285551]: pam_unix(cron:session): session closed for user librenms
+CRON[285555]: pam_unix(cron:session): session closed for user librenms
+CRON[285550]: pam_unix(cron:session): session closed for user librenms
+CRON[285553]: pam_unix(cron:session): session closed for user librenms
+CRON[285554]: pam_unix(cron:session): session closed for user librenms
+systemd[277755]: launchpadlib-cache-clean.service - Clean up old files in the Launchpadlib cache was skipped because of an unmet condition check (ConditionPathExists=/home/nhandinhvan/.launchpadlib/api.launchpad.net/cache).
+CRON[283896]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[287121]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[287117]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[287118]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[287119]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[287122]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[287124]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[287120]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[287126]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[287125]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[287123]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[287127]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[287128]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[287129]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[287130]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[287117]: pam_unix(cron:session): session closed for user librenms
+CRON[287118]: pam_unix(cron:session): session closed for user librenms
+CRON[287122]: pam_unix(cron:session): session closed for user librenms
+CRON[287119]: pam_unix(cron:session): session closed for user librenms
+CRON[287120]: pam_unix(cron:session): session closed for user librenms
+CRON[287121]: pam_unix(cron:session): session closed for user librenms
+CRON[285556]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[288742]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[288737]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[288744]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[288739]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[288741]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[288743]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[288740]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[288745]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[288748]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[288747]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[288738]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[288749]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[288746]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[288750]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[288738]: pam_unix(cron:session): session closed for user librenms
+CRON[288739]: pam_unix(cron:session): session closed for user librenms
+CRON[288742]: pam_unix(cron:session): session closed for user librenms
+CRON[288737]: pam_unix(cron:session): session closed for user librenms
+CRON[288740]: pam_unix(cron:session): session closed for user librenms
+CRON[288741]: pam_unix(cron:session): session closed for user librenms
+CRON[287123]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[290304]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[290299]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[290306]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[290303]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[290307]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[290300]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[290308]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[290301]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[290302]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[290305]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[290309]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[290310]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[290311]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[290313]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[290300]: pam_unix(cron:session): session closed for user librenms
+CRON[290302]: pam_unix(cron:session): session closed for user librenms
+CRON[290301]: pam_unix(cron:session): session closed for user librenms
+CRON[290304]: pam_unix(cron:session): session closed for user librenms
+CRON[290299]: pam_unix(cron:session): session closed for user librenms
+CRON[290303]: pam_unix(cron:session): session closed for user librenms
+CRON[288743]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[291918]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[291917]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[291923]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[291920]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[291919]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[291926]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[291924]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[291916]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[291922]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[291921]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[291925]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[291927]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[291928]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[291929]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[291917]: pam_unix(cron:session): session closed for user librenms
+CRON[291916]: pam_unix(cron:session): session closed for user librenms
+CRON[291918]: pam_unix(cron:session): session closed for user librenms
+CRON[291919]: pam_unix(cron:session): session closed for user librenms
+CRON[291921]: pam_unix(cron:session): session closed for user librenms
+CRON[291920]: pam_unix(cron:session): session closed for user librenms
+CRON[290305]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[293442]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+CRON[293446]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[293450]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+CRON[293447]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[293451]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[293452]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[293444]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[293443]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[293448]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[293454]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[293442]: pam_unix(cron:session): session closed for user root
+CRON[293456]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[293445]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[293457]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[293449]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[293459]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[293461]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[293444]: pam_unix(cron:session): session closed for user librenms
+CRON[293445]: pam_unix(cron:session): session closed for user librenms
+CRON[293443]: pam_unix(cron:session): session closed for user librenms
+CRON[293446]: pam_unix(cron:session): session closed for user librenms
+CRON[293448]: pam_unix(cron:session): session closed for user librenms
+CRON[293447]: pam_unix(cron:session): session closed for user librenms
+CRON[291922]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[295024]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[295029]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[295028]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[295031]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[295032]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[295033]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[295025]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[295026]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[295030]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[295027]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[295034]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[295036]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[295035]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[295037]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[295025]: pam_unix(cron:session): session closed for user librenms
+CRON[295027]: pam_unix(cron:session): session closed for user librenms
+CRON[295026]: pam_unix(cron:session): session closed for user librenms
+CRON[295024]: pam_unix(cron:session): session closed for user librenms
+CRON[295029]: pam_unix(cron:session): session closed for user librenms
+CRON[295028]: pam_unix(cron:session): session closed for user librenms
+CRON[293449]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[296638]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[296642]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[296643]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[296645]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[296647]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[296646]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[296640]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[296639]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[296641]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[296644]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[296648]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[296649]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[296651]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[296653]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[296640]: pam_unix(cron:session): session closed for user librenms
+CRON[296641]: pam_unix(cron:session): session closed for user librenms
+CRON[296639]: pam_unix(cron:session): session closed for user librenms
+CRON[296643]: pam_unix(cron:session): session closed for user librenms
+CRON[296638]: pam_unix(cron:session): session closed for user librenms
+CRON[296642]: pam_unix(cron:session): session closed for user librenms
+CRON[295030]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[298218]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[298225]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[298221]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[298224]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[298223]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[298220]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[298222]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[298226]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[298227]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[298229]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[298219]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[298228]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[298230]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[298231]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[298219]: pam_unix(cron:session): session closed for user librenms
+CRON[298220]: pam_unix(cron:session): session closed for user librenms
+CRON[298223]: pam_unix(cron:session): session closed for user librenms
+CRON[298221]: pam_unix(cron:session): session closed for user librenms
+CRON[298218]: pam_unix(cron:session): session closed for user librenms
+CRON[298222]: pam_unix(cron:session): session closed for user librenms
+CRON[296644]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[299788]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[299792]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[299793]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[299795]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[299796]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[299797]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[299791]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[299789]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[299790]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[299799]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[299798]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[299794]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[299802]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[299800]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[299793]: pam_unix(cron:session): session closed for user librenms
+CRON[299789]: pam_unix(cron:session): session closed for user librenms
+CRON[299790]: pam_unix(cron:session): session closed for user librenms
+CRON[299788]: pam_unix(cron:session): session closed for user librenms
+CRON[299791]: pam_unix(cron:session): session closed for user librenms
+CRON[299792]: pam_unix(cron:session): session closed for user librenms
+CRON[298224]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+systemd[1]: sysstat-collect.service: Deactivated successfully.
+systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[301367]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[301372]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[301368]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[301371]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[301370]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[301374]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[301369]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[301375]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[301373]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[301377]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[301376]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[301378]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[301379]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[301380]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[301368]: pam_unix(cron:session): session closed for user librenms
+CRON[301370]: pam_unix(cron:session): session closed for user librenms
+CRON[301367]: pam_unix(cron:session): session closed for user librenms
+CRON[301369]: pam_unix(cron:session): session closed for user librenms
+CRON[301372]: pam_unix(cron:session): session closed for user librenms
+CRON[301371]: pam_unix(cron:session): session closed for user librenms
+CRON[299794]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[302957]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[302961]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[302964]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[302965]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[302962]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[302959]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[302958]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[302960]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[302966]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[302963]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[302967]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[302968]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[302969]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[302970]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[302958]: pam_unix(cron:session): session closed for user librenms
+CRON[302959]: pam_unix(cron:session): session closed for user librenms
+CRON[302960]: pam_unix(cron:session): session closed for user librenms
+CRON[302957]: pam_unix(cron:session): session closed for user librenms
+CRON[302962]: pam_unix(cron:session): session closed for user librenms
+CRON[302961]: pam_unix(cron:session): session closed for user librenms
+CRON[301373]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[304515]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[304514]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[304510]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[304517]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[304518]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[304512]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[304513]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[304519]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[304520]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[304516]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[304521]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[304511]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[304522]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[304524]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[304511]: pam_unix(cron:session): session closed for user librenms
+CRON[304515]: pam_unix(cron:session): session closed for user librenms
+CRON[304510]: pam_unix(cron:session): session closed for user librenms
+CRON[304512]: pam_unix(cron:session): session closed for user librenms
+CRON[304513]: pam_unix(cron:session): session closed for user librenms
+CRON[304514]: pam_unix(cron:session): session closed for user librenms
+CRON[302963]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[306107]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[306111]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[306112]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[306114]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[306108]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[306109]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[306110]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[306116]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[306115]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[306117]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[306113]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[306118]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[306119]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[306120]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[306108]: pam_unix(cron:session): session closed for user librenms
+CRON[306112]: pam_unix(cron:session): session closed for user librenms
+CRON[306107]: pam_unix(cron:session): session closed for user librenms
+CRON[306109]: pam_unix(cron:session): session closed for user librenms
+CRON[306110]: pam_unix(cron:session): session closed for user librenms
+CRON[306111]: pam_unix(cron:session): session closed for user librenms
+CRON[304516]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[307678]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[307682]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[307685]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[307686]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[307680]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[307679]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[307689]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[307681]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[307683]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[307691]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[307684]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[307692]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[307693]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[307694]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[307683]: pam_unix(cron:session): session closed for user librenms
+CRON[307681]: pam_unix(cron:session): session closed for user librenms
+CRON[307680]: pam_unix(cron:session): session closed for user librenms
+CRON[307679]: pam_unix(cron:session): session closed for user librenms
+CRON[307678]: pam_unix(cron:session): session closed for user librenms
+CRON[307682]: pam_unix(cron:session): session closed for user librenms
+CRON[306113]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[309247]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+CRON[309255]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+CRON[309252]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[309251]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[309256]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[309257]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[309254]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[309253]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[309248]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[309249]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[309247]: pam_unix(cron:session): session closed for user root
+CRON[309250]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[309263]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[309264]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[309259]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[309260]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[309262]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[309248]: pam_unix(cron:session): session closed for user librenms
+CRON[309251]: pam_unix(cron:session): session closed for user librenms
+CRON[309249]: pam_unix(cron:session): session closed for user librenms
+CRON[309253]: pam_unix(cron:session): session closed for user librenms
+CRON[309250]: pam_unix(cron:session): session closed for user librenms
+CRON[309252]: pam_unix(cron:session): session closed for user librenms
+CRON[307684]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[310804]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[310805]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[310807]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[310808]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[310809]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[310811]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[310810]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[310802]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[310812]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[310813]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[310803]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[310806]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[310815]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[310816]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[310804]: pam_unix(cron:session): session closed for user librenms
+CRON[310802]: pam_unix(cron:session): session closed for user librenms
+CRON[310803]: pam_unix(cron:session): session closed for user librenms
+CRON[310807]: pam_unix(cron:session): session closed for user librenms
+CRON[310805]: pam_unix(cron:session): session closed for user librenms
+CRON[310806]: pam_unix(cron:session): session closed for user librenms
+CRON[309254]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[312346]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[312350]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[312351]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[312353]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[312354]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[312347]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[312352]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[312349]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[312348]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[312357]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[312356]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[312355]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[312358]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[312359]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[312347]: pam_unix(cron:session): session closed for user librenms
+CRON[312349]: pam_unix(cron:session): session closed for user librenms
+CRON[312348]: pam_unix(cron:session): session closed for user librenms
+CRON[312346]: pam_unix(cron:session): session closed for user librenms
+CRON[312351]: pam_unix(cron:session): session closed for user librenms
+CRON[312350]: pam_unix(cron:session): session closed for user librenms
+CRON[310808]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[313964]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[313971]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[313968]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[313969]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[313967]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[313972]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[313973]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[313974]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[313970]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[313965]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[313975]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[313966]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[313976]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[313978]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[313966]: pam_unix(cron:session): session closed for user librenms
+CRON[313967]: pam_unix(cron:session): session closed for user librenms
+CRON[313965]: pam_unix(cron:session): session closed for user librenms
+CRON[313969]: pam_unix(cron:session): session closed for user librenms
+CRON[313964]: pam_unix(cron:session): session closed for user librenms
+CRON[313968]: pam_unix(cron:session): session closed for user librenms
+CRON[312352]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[315502]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[315505]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[315503]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[315498]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[315500]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[315504]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[315508]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[315501]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[315507]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[315499]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[315506]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[315509]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[315510]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[315511]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[315498]: pam_unix(cron:session): session closed for user librenms
+CRON[315499]: pam_unix(cron:session): session closed for user librenms
+CRON[315501]: pam_unix(cron:session): session closed for user librenms
+CRON[315500]: pam_unix(cron:session): session closed for user librenms
+CRON[315503]: pam_unix(cron:session): session closed for user librenms
+CRON[315502]: pam_unix(cron:session): session closed for user librenms
+CRON[313970]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+systemd[1]: sysstat-collect.service: Deactivated successfully.
+systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[317102]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[317106]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[317109]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[317110]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[317103]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[317104]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[317108]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[317112]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[317105]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[317107]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[317113]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[317115]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[317116]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[317117]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[317103]: pam_unix(cron:session): session closed for user librenms
+CRON[317104]: pam_unix(cron:session): session closed for user librenms
+CRON[317102]: pam_unix(cron:session): session closed for user librenms
+CRON[317105]: pam_unix(cron:session): session closed for user librenms
+CRON[317107]: pam_unix(cron:session): session closed for user librenms
+CRON[317106]: pam_unix(cron:session): session closed for user librenms
+CRON[315504]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[318689]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[318690]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[318693]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[318694]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[318691]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[318686]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[318696]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[318688]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[318687]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[318692]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[318697]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[318699]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[318700]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[318703]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[318686]: pam_unix(cron:session): session closed for user librenms
+CRON[318689]: pam_unix(cron:session): session closed for user librenms
+CRON[318688]: pam_unix(cron:session): session closed for user librenms
+CRON[318687]: pam_unix(cron:session): session closed for user librenms
+CRON[318691]: pam_unix(cron:session): session closed for user librenms
+CRON[318690]: pam_unix(cron:session): session closed for user librenms
+CRON[317108]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[320219]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[320224]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[320223]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[320227]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[320220]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[320221]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[320222]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[320229]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[320230]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[320231]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[320225]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[320226]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[320233]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[320234]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[320219]: pam_unix(cron:session): session closed for user librenms
+CRON[320220]: pam_unix(cron:session): session closed for user librenms
+CRON[320225]: pam_unix(cron:session): session closed for user librenms
+CRON[320221]: pam_unix(cron:session): session closed for user librenms
+CRON[320222]: pam_unix(cron:session): session closed for user librenms
+CRON[320223]: pam_unix(cron:session): session closed for user librenms
+CRON[318692]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[321813]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[321808]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[321815]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[321810]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[321811]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[321812]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[321814]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[321816]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[321817]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[321809]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[321818]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[321820]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[321819]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[321821]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[321809]: pam_unix(cron:session): session closed for user librenms
+CRON[321810]: pam_unix(cron:session): session closed for user librenms
+CRON[321808]: pam_unix(cron:session): session closed for user librenms
+CRON[321811]: pam_unix(cron:session): session closed for user librenms
+CRON[321813]: pam_unix(cron:session): session closed for user librenms
+CRON[321812]: pam_unix(cron:session): session closed for user librenms
+CRON[320226]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[323400]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[323401]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[323404]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[323398]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[323403]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[323399]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[323405]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[323407]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[323406]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[323409]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[323408]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[323402]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[323410]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[323411]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[323399]: pam_unix(cron:session): session closed for user librenms
+CRON[323400]: pam_unix(cron:session): session closed for user librenms
+CRON[323403]: pam_unix(cron:session): session closed for user librenms
+CRON[323398]: pam_unix(cron:session): session closed for user librenms
+CRON[323401]: pam_unix(cron:session): session closed for user librenms
+CRON[323402]: pam_unix(cron:session): session closed for user librenms
+CRON[321814]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting fwupd-refresh.service - Refresh fwupd metadata and update motd...
+"dbus-daemon[707]: [system] Activating via systemd: service name='org.freedesktop.fwupd' unit='fwupd.service' requested by ':1.445' (uid=989 pid=324975 comm=""/usr/bin/fwupdmgr refresh"" label=""unconfined"")"
+systemd[1]: Starting fwupd.service - Firmware update daemon...
+fwupd[324980]: 16:04:59.855 FuMain               Daemon ready for requests (locale en_US.UTF-8)
+dbus-daemon[707]: [system] Successfully activated service 'org.freedesktop.fwupd'
+systemd[1]: Started fwupd.service - Firmware update daemon.
+systemd[1]: fwupd-refresh.service: Deactivated successfully.
+systemd[1]: Finished fwupd-refresh.service - Refresh fwupd metadata and update motd.
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[325012]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+CRON[325016]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[325015]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[325020]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[325022]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+CRON[325021]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[325014]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[325012]: pam_unix(cron:session): session closed for user root
+CRON[325018]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[325013]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[325017]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[325027]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[325028]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[325026]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[325029]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[325019]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[325030]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[325014]: pam_unix(cron:session): session closed for user librenms
+CRON[325016]: pam_unix(cron:session): session closed for user librenms
+CRON[325015]: pam_unix(cron:session): session closed for user librenms
+CRON[325013]: pam_unix(cron:session): session closed for user librenms
+CRON[325018]: pam_unix(cron:session): session closed for user librenms
+CRON[325017]: pam_unix(cron:session): session closed for user librenms
+CRON[323404]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[326608]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[326612]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[326613]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[326615]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[326616]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[326617]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[326611]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[326609]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[326610]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[326614]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[326618]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[326619]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[326620]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[326621]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[326609]: pam_unix(cron:session): session closed for user librenms
+CRON[326608]: pam_unix(cron:session): session closed for user librenms
+CRON[326611]: pam_unix(cron:session): session closed for user librenms
+CRON[326613]: pam_unix(cron:session): session closed for user librenms
+CRON[326610]: pam_unix(cron:session): session closed for user librenms
+CRON[326612]: pam_unix(cron:session): session closed for user librenms
+CRON[325019]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[328198]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[328202]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[328201]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[328199]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[328205]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[328200]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[328206]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[328204]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[328207]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[328203]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[328208]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[328209]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[328210]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[328211]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[328200]: pam_unix(cron:session): session closed for user librenms
+CRON[328199]: pam_unix(cron:session): session closed for user librenms
+CRON[328203]: pam_unix(cron:session): session closed for user librenms
+CRON[328198]: pam_unix(cron:session): session closed for user librenms
+CRON[328201]: pam_unix(cron:session): session closed for user librenms
+CRON[328202]: pam_unix(cron:session): session closed for user librenms
+CRON[326614]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[329771]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[329775]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[329778]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[329773]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[329774]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[329776]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[329780]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[329777]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[329779]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[329781]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[329772]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[329783]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[329784]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[329782]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[329774]: pam_unix(cron:session): session closed for user librenms
+CRON[329772]: pam_unix(cron:session): session closed for user librenms
+CRON[329771]: pam_unix(cron:session): session closed for user librenms
+CRON[329773]: pam_unix(cron:session): session closed for user librenms
+CRON[329776]: pam_unix(cron:session): session closed for user librenms
+CRON[329775]: pam_unix(cron:session): session closed for user librenms
+CRON[328204]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: Starting phpsessionclean.service - Clean php session files...
+systemd[1]: phpsessionclean.service: Deactivated successfully.
+systemd[1]: Finished phpsessionclean.service - Clean php session files.
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[331401]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+CRON[331409]: (root) CMD (  [ -x /usr/lib/php/sessionclean ] && if [ ! -d /run/systemd/system ]; then /usr/lib/php/sessionclean; fi)
+CRON[331405]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[331406]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[331410]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[331411]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[331401]: pam_unix(cron:session): session closed for user root
+CRON[331402]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[331407]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[331403]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[331408]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[331412]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[331404]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[331413]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[331415]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[331417]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[331418]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[331404]: pam_unix(cron:session): session closed for user librenms
+CRON[331403]: pam_unix(cron:session): session closed for user librenms
+CRON[331405]: pam_unix(cron:session): session closed for user librenms
+CRON[331402]: pam_unix(cron:session): session closed for user librenms
+CRON[331407]: pam_unix(cron:session): session closed for user librenms
+CRON[331406]: pam_unix(cron:session): session closed for user librenms
+CRON[329777]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+systemd[1]: sysstat-collect.service: Deactivated successfully.
+systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+systemd[1]: fwupd.service: Deactivated successfully.
+CRON[332985]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[332990]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[332992]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[332989]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[332993]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[332994]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[332986]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[332991]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[332988]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[332996]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[332998]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[333000]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[332987]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[333005]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[332986]: pam_unix(cron:session): session closed for user librenms
+CRON[332985]: pam_unix(cron:session): session closed for user librenms
+CRON[332988]: pam_unix(cron:session): session closed for user librenms
+CRON[332987]: pam_unix(cron:session): session closed for user librenms
+CRON[332990]: pam_unix(cron:session): session closed for user librenms
+CRON[332989]: pam_unix(cron:session): session closed for user librenms
+CRON[331408]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[334530]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[334537]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[334531]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[334533]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[334538]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[334539]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[334532]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[334540]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[334534]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[334535]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[334536]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[334545]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[334546]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[334547]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[334532]: pam_unix(cron:session): session closed for user librenms
+CRON[334531]: pam_unix(cron:session): session closed for user librenms
+CRON[334535]: pam_unix(cron:session): session closed for user librenms
+CRON[334530]: pam_unix(cron:session): session closed for user librenms
+CRON[334533]: pam_unix(cron:session): session closed for user librenms
+CRON[334534]: pam_unix(cron:session): session closed for user librenms
+CRON[332991]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[336120]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[336124]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[336127]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[336128]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[336126]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[336122]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[336125]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[336123]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[336121]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[336132]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[336133]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[336134]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[336135]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[336136]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[336121]: pam_unix(cron:session): session closed for user librenms
+CRON[336125]: pam_unix(cron:session): session closed for user librenms
+CRON[336123]: pam_unix(cron:session): session closed for user librenms
+CRON[336122]: pam_unix(cron:session): session closed for user librenms
+CRON[336120]: pam_unix(cron:session): session closed for user librenms
+CRON[336124]: pam_unix(cron:session): session closed for user librenms
+CRON[334536]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[337706]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[337704]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[337705]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[337708]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[337710]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[337713]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[337711]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[337714]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[337707]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[337715]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[337709]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[337712]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[337716]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[337717]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[337705]: pam_unix(cron:session): session closed for user librenms
+CRON[337706]: pam_unix(cron:session): session closed for user librenms
+CRON[337707]: pam_unix(cron:session): session closed for user librenms
+CRON[337704]: pam_unix(cron:session): session closed for user librenms
+CRON[337709]: pam_unix(cron:session): session closed for user librenms
+CRON[337708]: pam_unix(cron:session): session closed for user librenms
+CRON[336126]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[339345]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[339340]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[339344]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[339341]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[339347]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[339346]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[339342]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[339348]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[339343]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[339350]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[339352]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[339351]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[339353]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[339349]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[339342]: pam_unix(cron:session): session closed for user librenms
+CRON[339343]: pam_unix(cron:session): session closed for user librenms
+CRON[339341]: pam_unix(cron:session): session closed for user librenms
+CRON[339345]: pam_unix(cron:session): session closed for user librenms
+CRON[339340]: pam_unix(cron:session): session closed for user librenms
+CRON[339344]: pam_unix(cron:session): session closed for user librenms
+CRON[337710]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[340876]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+CRON[340884]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+CRON[340880]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[340881]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[340886]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[340878]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[340887]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[340877]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[340883]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[340879]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[340876]: pam_unix(cron:session): session closed for user root
+CRON[340888]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[340882]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[340889]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[340890]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[340892]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[340893]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[340878]: pam_unix(cron:session): session closed for user librenms
+CRON[340882]: pam_unix(cron:session): session closed for user librenms
+CRON[340877]: pam_unix(cron:session): session closed for user librenms
+CRON[340879]: pam_unix(cron:session): session closed for user librenms
+CRON[340880]: pam_unix(cron:session): session closed for user librenms
+CRON[340881]: pam_unix(cron:session): session closed for user librenms
+CRON[339346]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[342470]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[342473]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[342474]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[342477]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[342479]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[342478]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[342472]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[342471]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[342475]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[342476]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[342481]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[342484]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[342486]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[342487]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[342472]: pam_unix(cron:session): session closed for user librenms
+CRON[342471]: pam_unix(cron:session): session closed for user librenms
+CRON[342473]: pam_unix(cron:session): session closed for user librenms
+CRON[342470]: pam_unix(cron:session): session closed for user librenms
+CRON[342475]: pam_unix(cron:session): session closed for user librenms
+CRON[342474]: pam_unix(cron:session): session closed for user librenms
+CRON[340883]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[344049]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+CRON[344055]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+CRON[344050]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[344051]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[344058]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[344052]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[344060]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[344053]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[344056]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[344061]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[344057]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[344049]: pam_unix(cron:session): session closed for user root
+CRON[344062]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[344063]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[344054]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[344064]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[344066]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[344050]: pam_unix(cron:session): session closed for user librenms
+CRON[344051]: pam_unix(cron:session): session closed for user librenms
+CRON[344052]: pam_unix(cron:session): session closed for user librenms
+CRON[344056]: pam_unix(cron:session): session closed for user librenms
+CRON[344053]: pam_unix(cron:session): session closed for user librenms
+CRON[344054]: pam_unix(cron:session): session closed for user librenms
+CRON[342476]: pam_unix(cron:session): session closed for user librenms
+systemd[1]: Starting librenms-scheduler.service - LibreNMS Scheduler...
+systemd[1]: librenms-scheduler.service: Deactivated successfully.
+systemd[1]: Finished librenms-scheduler.service - LibreNMS Scheduler.
+CRON[345627]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[345631]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[345632]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[345634]: (librenms) CMD (   /opt/librenms/check-services.php >> /dev/null 2>&1)
+CRON[345633]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[345630]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[345636]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16)
+CRON[345629]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[345635]: (librenms) CMD (   /opt/librenms/cronic /opt/librenms/discovery-wrapper.py 1)
+CRON[345638]: (librenms) CMD (   /opt/librenms/alerts.php >> /dev/null 2>&1)
+CRON[345637]: (librenms) CMD (   /opt/librenms/discovery.php -h new >> /dev/null 2>&1)
+CRON[345639]: (librenms) CMD (   /opt/librenms/poll-billing.php >> /dev/null 2>&1)
+CRON[345628]: pam_unix(cron:session): session opened for user librenms(uid=999) by librenms(uid=0)
+CRON[345640]: (librenms) CMD (   /opt/librenms/billing-calculate.php >> /dev/null 2>&1)
+CRON[345628]: pam_unix(cron:session): session closed for user librenms
+CRON[345627]: pam_unix(cron:session): session closed for user librenms
+CRON[345629]: pam_unix(cron:session): session closed for user librenms
+CRON[345632]: pam_unix(cron:session): session closed for user librenms
+CRON[345630]: pam_unix(cron:session): session closed for user librenms
+CRON[345631]: pam_unix(cron:session): session closed for user librenms
